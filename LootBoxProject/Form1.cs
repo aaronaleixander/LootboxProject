@@ -21,5 +21,25 @@ namespace LootBoxProject
         {
             Close();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAddBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEditBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnDeleteBox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
