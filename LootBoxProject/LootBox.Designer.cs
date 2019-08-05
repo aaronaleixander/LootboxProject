@@ -1,6 +1,6 @@
 ﻿namespace LootBoxProject
 {
-    partial class Form1
+    partial class LootBox
     {
         /// <summary>
         /// Required designer variable.
