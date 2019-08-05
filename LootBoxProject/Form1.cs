@@ -16,5 +16,10 @@ namespace LootBoxProject
         {
             InitializeComponent();
         }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

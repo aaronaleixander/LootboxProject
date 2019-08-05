@@ -108,6 +108,7 @@
             this.btnClose.TabIndex = 7;
             this.btnClose.Text = "Exit";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // Form1
             // 
