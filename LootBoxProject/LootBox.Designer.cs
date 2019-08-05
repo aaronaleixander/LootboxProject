@@ -81,6 +81,7 @@
             this.btnAddBox.TabIndex = 4;
             this.btnAddBox.Text = "Add Loot Box";
             this.btnAddBox.UseVisualStyleBackColor = true;
+            this.btnAddBox.Click += new System.EventHandler(this.BtnAddBox_Click);
             // 
             // btnEditBox
             // 
@@ -90,6 +91,7 @@
             this.btnEditBox.TabIndex = 5;
             this.btnEditBox.Text = "Edit Loot Box";
             this.btnEditBox.UseVisualStyleBackColor = true;
+            this.btnEditBox.Click += new System.EventHandler(this.BtnEditBox_Click);
             // 
             // btnDeleteBox
             // 
@@ -99,6 +101,7 @@
             this.btnDeleteBox.TabIndex = 6;
             this.btnDeleteBox.Text = "Delete Loot Box";
             this.btnDeleteBox.UseVisualStyleBackColor = true;
+            this.btnDeleteBox.Click += new System.EventHandler(this.BtnDeleteBox_Click);
             // 
             // btnClose
             // 
@@ -108,6 +111,7 @@
             this.btnClose.TabIndex = 7;
             this.btnClose.Text = "Exit";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // Form1
             // 
@@ -124,6 +128,7 @@
             this.Controls.Add(this.lstLootBox);
             this.Name = "Form1";
             this.Text = "LootBox";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
