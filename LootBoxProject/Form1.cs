@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LootBoxProject
 {
-    public partial class Form1 : Form
+    public partial class FrmAddLootbox : Form
     {
-        public Form1()
+        public FrmAddLootbox()
         {
             InitializeComponent();
         }
