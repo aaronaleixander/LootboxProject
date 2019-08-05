@@ -16,7 +16,7 @@ namespace LootBoxProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAddLootbox());
+            Application.Run(new LootBox());
         }
     }
 }

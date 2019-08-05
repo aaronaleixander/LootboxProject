@@ -47,13 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddForm.cs">
+    <Compile Include="LootBox.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddForm.Designer.cs">
       <DependentUpon>AddForm.cs</DependentUpon>
+    <Compile Include="LootBox.Designer.cs">
+      <DependentUpon>LootBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LootBox.resx">
+      <DependentUpon>LootBox.cs</DependentUpon>
     <EmbeddedResource Include="AddForm.resx">
       <DependentUpon>AddForm.cs</DependentUpon>
     </EmbeddedResource>
