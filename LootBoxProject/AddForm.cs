@@ -41,5 +41,10 @@ namespace LootBoxProject
         {
 
         }
+
+        private void Label4_Click(object sender, EventArgs e)
+        {
+            // IGNORE THIS METHOD. WILL DELETE LATER!!!!!!!
+        }
     }
 }
