@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LootBoxProject
 {
-    public partial class LootBox : Form
+    public partial class FrmAddLootbox : Form
     {
-        public LootBox()
+        public FrmAddLootbox()
         {
             InitializeComponent();
         }
@@ -29,8 +29,7 @@ namespace LootBoxProject
 
         private void BtnAddBox_Click(object sender, EventArgs e)
         {
-            FrmAddLootbox addLootboxForm = new FrmAddLootbox();
-            addLootboxForm.ShowDialog();
+
         }
 
         private void BtnEditBox_Click(object sender, EventArgs e)
@@ -41,6 +40,11 @@ namespace LootBoxProject
         private void BtnDeleteBox_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Label4_Click(object sender, EventArgs e)
+        {
+            // IGNORE THIS METHOD. WILL DELETE LATER!!!!!!!
         }
     }
 }

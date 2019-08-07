@@ -46,26 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Box.cs" />
     <Compile Include="AddForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DBHelper.cs" />
     <Compile Include="LootBox.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddForm.Designer.cs">
       <DependentUpon>AddForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="LootBox.Designer.cs">
       <DependentUpon>LootBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="LootboxClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="LootBox.resx">
       <DependentUpon>LootBox.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AddForm.resx">
       <DependentUpon>AddForm.cs</DependentUpon>
     </EmbeddedResource>
