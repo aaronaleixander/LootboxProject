@@ -29,8 +29,7 @@ namespace LootBoxProject
 
         private void BtnAddBox_Click(object sender, EventArgs e)
         {
-            FrmAddLootbox addLootboxForm = new FrmAddLootbox();
-            addLootboxForm.ShowDialog();
+
         }
 
         private void BtnEditBox_Click(object sender, EventArgs e)
