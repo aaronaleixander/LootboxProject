@@ -67,8 +67,8 @@ namespace LootBoxProject
             addCmd.Parameters.AddWithValue("@theme", lb.Theme);
             addCmd.Parameters.AddWithValue("@name", lb.Name);
             addCmd.Parameters.AddWithValue("@contents", lb.Contents);
-            addCmd.Parameters.AddWithValue("@description", lb.Theme);
-            addCmd.Parameters.AddWithValue("@theme", lb.Theme);
+            addCmd.Parameters.AddWithValue("@description", lb.Description);
+            addCmd.Parameters.AddWithValue("@price", lb.Price);
 
             try
             {

@@ -45,6 +45,7 @@
             this.lstLootBox.Name = "lstLootBox";
             this.lstLootBox.Size = new System.Drawing.Size(195, 121);
             this.lstLootBox.TabIndex = 0;
+            this.lstLootBox.SelectedIndexChanged += new System.EventHandler(this.LstLootBox_SelectedIndexChanged);
             // 
             // LstItem
             // 
@@ -113,7 +114,7 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
-            // Form1
+            // LootBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -126,7 +127,7 @@
             this.Controls.Add(this.txtLootBox);
             this.Controls.Add(this.LstItem);
             this.Controls.Add(this.lstLootBox);
-            this.Name = "Form1";
+            this.Name = "LootBox";
             this.Text = "LootBox";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

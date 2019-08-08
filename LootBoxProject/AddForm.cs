@@ -22,29 +22,29 @@ namespace LootBoxProject
             Close();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
+            // Add Lootbox into database
+            LootboxClass lb = new LootboxClass()
+            {
+                Theme = txtTheme.Text,
+                Name = txtName.Text,
+                Contents = txtContents.Text,
+                Description = txtDescription.Text,
+                Price = Convert.ToDouble(txtPrice.Text)
+            };
 
-        }
-
-        private void BtnAddBox_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnEditBox_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnDeleteBox_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label4_Click(object sender, EventArgs e)
-        {
-            // IGNORE THIS METHOD. WILL DELETE LATER!!!!!!!
+            try
+            {
+                LootboxDB.Add(lb);
+                MessageBox.Show("Lootbox added");
+                Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error, Try Again.");
+            }
         }
     }
 }

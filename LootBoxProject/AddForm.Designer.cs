@@ -36,8 +36,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtContents
@@ -90,46 +92,64 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(175, 237);
+            this.btnAdd.Location = new System.Drawing.Point(175, 293);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(200, 23);
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Add Lootbox";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(175, 294);
+            this.btnCancel.Location = new System.Drawing.Point(175, 341);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(200, 23);
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // label5
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(175, 189);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 8;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(80, 200);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Description: ";
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Location = new System.Drawing.Point(175, 200);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(200, 20);
+            this.txtDescription.TabIndex = 11;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(77, 189);
+            this.label4.Location = new System.Drawing.Point(80, 247);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Date Added: ";
-            this.label4.Click += new System.EventHandler(this.Label4_Click);
+            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Price:";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(175, 240);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(200, 20);
+            this.txtPrice.TabIndex = 13;
             // 
             // FrmAddLootbox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(495, 402);
+            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txtDescription);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label3);
@@ -155,8 +175,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtPrice;
     }
 }
 

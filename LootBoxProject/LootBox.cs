@@ -42,5 +42,21 @@ namespace LootBoxProject
         {
 
         }
+
+        private void LstLootBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PopulateLootboxListbox()
+        {
+            List<LootboxClass> lootboxes = LootboxDB.GetAllLootboxes();
+            lootboxes = lootboxes.OrderBy(lb => lb.Name).ToList();
+
+            foreach(LootboxClass ltbx in lootboxes)
+            {
+                lstLootBox.Items.Add(ltbx).ToString();
+            }
+        }
     }
 }
