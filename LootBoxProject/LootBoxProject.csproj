@@ -60,6 +60,7 @@
       <DependentUpon>LootBox.cs</DependentUpon>
     </Compile>
     <Compile Include="LootboxClass.cs" />
+    <Compile Include="LootboxDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="LootBox.resx">
