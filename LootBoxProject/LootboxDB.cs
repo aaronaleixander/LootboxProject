@@ -59,7 +59,7 @@ namespace LootBoxProject
             SqlCommand addCmd = new SqlCommand();
             addCmd.Connection = con;
 
-            addCmd.CommandText = "INSERT INTO Lootboxes (LootboxTheme, LootboxName. LootboxContents, LootboxDescription, LootboxPrice)" +
+            addCmd.CommandText = "INSERT INTO Lootboxes (LootboxTheme, LootboxName, LootboxContents, LootboxDescription, LootboxPrice)" +
                                  "VALUES (@theme, @name, @contents, @description, @price)";
 
             // Add values into the parameters
