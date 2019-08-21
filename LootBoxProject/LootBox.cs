@@ -34,10 +34,10 @@ namespace LootBoxProject
 
         private void Populate_lstLootBox()
         {
-            List<LootBox> boxes = LootboxDB.GetAllLootboxes();
-            boxes = boxes.OrderBy(boxes => boxes.Name).ToList();
+            List<LootboxClass> boxes = LootboxDB.GetAllLootboxes();
+            boxes = boxes.OrderBy(box => box.Name).ToList();
             lstLootBox.DataSource = boxes;
-            lstLootBox.DisplayMember = nameof(LootBox.Name);
+            lstLootBox.DisplayMember = nameof(LootboxClass.Name);
         }
 
         private void BtnAddBox_Click(object sender, EventArgs e)
