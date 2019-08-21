@@ -24,7 +24,20 @@ namespace LootBoxProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            PopulateForm();
+        }
 
+        private void PopulateForm()
+        {
+            Populate_lstLootBox();
+        }
+
+        private void Populate_lstLootBox()
+        {
+            List<LootBox> boxes = LootboxDB.GetAllLootboxes();
+            boxes = boxes.OrderBy(boxes => boxes.Name).ToList();
+            lstLootBox.DataSource = boxes;
+            lstLootBox.DisplayMember = nameof(LootBox.Name);
         }
 
         private void BtnAddBox_Click(object sender, EventArgs e)
