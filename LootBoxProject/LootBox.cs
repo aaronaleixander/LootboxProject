@@ -40,7 +40,9 @@ namespace LootBoxProject
 
         private void BtnDeleteBox_Click(object sender, EventArgs e)
         {
-
+            List<LootboxClass> boxs = LootboxDB.GetAllLootboxes();
+            LootboxClass box = lstLootBox.SelectedItem as LootboxClass;
+            boxs.Remove(box);
         }
 
         private void LstLootBox_SelectedIndexChanged(object sender, EventArgs e)
