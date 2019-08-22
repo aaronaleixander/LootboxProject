@@ -58,7 +58,8 @@ namespace LootBoxProject
 
         private void LstLootBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            LootboxClass boxs = lstLootBox.SelectedItem as LootboxClass;
+            txtLootBox.Text = boxs.Description;
         }
 
         private void PopulateLootboxListbox()
