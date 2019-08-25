@@ -30,6 +30,7 @@ namespace LootBoxProject
         private void PopulateForm()
         {
             Populate_lstLootBox();
+            PopulateLootboxTxt();
         }
 
         private void Populate_lstLootBox()
@@ -44,19 +45,27 @@ namespace LootBoxProject
         {
             FrmAddLootbox addLootboxForm = new FrmAddLootbox();
             addLootboxForm.ShowDialog();
+            PopulateForm();
         }
 
         private void BtnEditBox_Click(object sender, EventArgs e)
         {
-
+            //place at end of code
+            PopulateForm();
         }
 
         private void BtnDeleteBox_Click(object sender, EventArgs e)
         {
-
+            //place at end of code
+            PopulateForm();
         }
 
         private void LstLootBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PopulateLootboxTxt();
+        }
+
+        private void PopulateLootboxTxt()
         {
             LootboxClass boxs = lstLootBox.SelectedItem as LootboxClass;
             txtLootBox.Text = boxs.Description;
