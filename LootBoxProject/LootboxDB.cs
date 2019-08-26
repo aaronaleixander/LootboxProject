@@ -81,5 +81,25 @@ namespace LootBoxProject
             }
 
         }
+
+        public static void Delete(LootboxClass Ib)
+        {
+            SqlConnection con = DBHelper.GetConnection();
+            SqlCommand deleteCmd = new SqlCommand();
+            deleteCmd.Connection = con;
+
+            deleteCmd.CommandText = "DELETE FROM Lootboxes " +
+                                    "WHERE LootboxName = " + "'" + Ib.Name + "'";
+
+            try
+            {
+                con.Open();
+                deleteCmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
     }
 }

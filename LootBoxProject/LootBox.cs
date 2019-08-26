@@ -56,7 +56,9 @@ namespace LootBoxProject
 
         private void BtnDeleteBox_Click(object sender, EventArgs e)
         {
-            //place at end of code
+            //List<LootboxClass> boxs = LootboxDB.GetAllLootboxes();
+            LootboxClass box = lstLootBox.SelectedItem as LootboxClass;
+            LootboxDB.Delete(box);
             PopulateForm();
         }
 
