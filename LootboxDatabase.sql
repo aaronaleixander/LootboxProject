@@ -20,3 +20,13 @@ CREATE TABLE Lootboxes
 	  , LootboxDescription			varchar(100)	NOT NULL
 	  , LootboxPrice				smallmoney		NOT NULL
 	)
+
+GO
+
+CREATE TABLE Items
+	(
+		ItemID					int				PRIMARY KEY IDENTITY
+	  , ItemName				varchar(30)		NOT NULL
+	  , ItemDiscription			varchar(100)	NOT NULL
+	)
+GO

@@ -24,30 +24,51 @@ namespace LootBoxProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            PopulateForm();
+        }
 
+        private void PopulateForm()
+        {
+            Populate_lstLootBox();
+            PopulateLootboxTxt();
+        }
+
+        private void Populate_lstLootBox()
+        {
+            List<LootboxClass> boxes = LootboxDB.GetAllLootboxes();
+            boxes = boxes.OrderBy(box => box.Name).ToList();
+            lstLootBox.DataSource = boxes;
+            lstLootBox.DisplayMember = nameof(LootboxClass.Name);
         }
 
         private void BtnAddBox_Click(object sender, EventArgs e)
         {
             FrmAddLootbox addLootboxForm = new FrmAddLootbox();
             addLootboxForm.ShowDialog();
+            PopulateForm();
         }
 
         private void BtnEditBox_Click(object sender, EventArgs e)
         {
-
+            //place at end of code
+            PopulateForm();
         }
 
         private void BtnDeleteBox_Click(object sender, EventArgs e)
         {
-            List<LootboxClass> boxs = LootboxDB.GetAllLootboxes();
-            LootboxClass box = lstLootBox.SelectedItem as LootboxClass;
-            boxs.Remove(box);
+            //place at end of code
+            PopulateForm();
         }
 
         private void LstLootBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            PopulateLootboxTxt();
+        }
 
+        private void PopulateLootboxTxt()
+        {
+            LootboxClass boxs = lstLootBox.SelectedItem as LootboxClass;
+            txtLootBox.Text = boxs.Description;
         }
 
         private void PopulateLootboxListbox()
