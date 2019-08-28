@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LootBoxProject
 {
-    class LootboxClass
+    public class LootboxClass
     {
         // Default no arg constructor
         public LootboxClass()
@@ -20,6 +20,7 @@ namespace LootBoxProject
             Price = price;
         }
 
+        public int LootboxID { get; set; }
         public string Theme { get; set; }
         public string Name { get; set; }
         public string Contents { get; set; }
