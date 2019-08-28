@@ -69,8 +69,11 @@ namespace LootBoxProject
 
         private void PopulateLootboxTxt()
         {
-            LootboxClass boxs = lstLootBox.SelectedItem as LootboxClass;
-            txtLootBox.Text = boxs.Description;
+            if (lstLootBox.SelectedIndex != -1)
+            {
+                LootboxClass boxs = lstLootBox.SelectedItem as LootboxClass;
+                txtLootBox.Text = boxs.Description;
+            }
         }
 
         private void PopulateLootboxListbox()
