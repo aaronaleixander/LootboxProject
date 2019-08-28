@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace LootBoxProject
 {
-    public partial class LootBox : Form
+    public partial class LootBoxClass : Form
     {
-        public LootBox()
+
+
+        public LootBoxClass()
         {
             InitializeComponent();
         }
@@ -43,13 +45,18 @@ namespace LootBoxProject
 
         private void BtnAddBox_Click(object sender, EventArgs e)
         {
-            FrmAddLootbox addLootboxForm = new FrmAddLootbox();
+            FrmAddUpdate addLootboxForm = new FrmAddUpdate();
             addLootboxForm.ShowDialog();
             PopulateForm();
         }
 
         private void BtnEditBox_Click(object sender, EventArgs e)
         {
+            LootboxClass ltbx = lstLootBox.SelectedItem as LootboxClass;
+            FrmAddUpdate updateForm = new FrmAddUpdate();
+            LootboxDB.Update(ltbx);
+            updateForm.ShowDialog();
+            
             //place at end of code
             PopulateForm();
         }
@@ -69,7 +76,9 @@ namespace LootBoxProject
 
         private void PopulateLootboxTxt()
         {
+
             if (lstLootBox.SelectedIndex != -1)
+
             {
                 LootboxClass boxs = lstLootBox.SelectedItem as LootboxClass;
                 txtLootBox.Text = boxs.Description;

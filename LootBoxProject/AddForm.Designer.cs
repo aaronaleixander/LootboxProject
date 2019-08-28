@@ -1,6 +1,6 @@
 ﻿namespace LootBoxProject
 {
-    partial class FrmAddLootbox
+    partial class FrmAddUpdate
     {
         /// <summary>
         /// Required designer variable.
@@ -108,6 +108,7 @@
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // label5
             // 
@@ -141,7 +142,7 @@
             this.txtPrice.Size = new System.Drawing.Size(200, 20);
             this.txtPrice.TabIndex = 13;
             // 
-            // FrmAddLootbox
+            // FrmAddUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -158,8 +159,9 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtTheme);
             this.Controls.Add(this.txtContents);
-            this.Name = "FrmAddLootbox";
+            this.Name = "FrmAddUpdate";
             this.Text = "Add Lootbox";
+            this.Load += new System.EventHandler(this.FrmAddUpdate_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

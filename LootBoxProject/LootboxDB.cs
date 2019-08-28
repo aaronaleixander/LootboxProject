@@ -82,6 +82,38 @@ namespace LootBoxProject
 
         }
 
+        public static void Update(LootboxClass lb)
+        {
+            SqlConnection con = DBHelper.GetConnection();
+            SqlCommand updateCmd = new SqlCommand();
+            updateCmd.Connection = con;
+
+
+
+            updateCmd.CommandText = "UPDATE Lootboxes SET LootboxTheme = @theme, LootboxName = @name, LootboxContents = @contents, LootboxDescription = @description, LootboxPrice = @price " +
+                                    "WHERE LootboxID = @id";
+
+            
+            updateCmd.Parameters.AddWithValue("@id", lb.LootboxID);
+            updateCmd.Parameters.AddWithValue("@theme", lb.Theme);
+            updateCmd.Parameters.AddWithValue("@name", lb.Name);
+            updateCmd.Parameters.AddWithValue("@contents", lb.Contents);
+            updateCmd.Parameters.AddWithValue("@description", lb.Description);
+            updateCmd.Parameters.AddWithValue("@price", lb.Price);
+
+
+            try
+            {
+                con.Open();
+                updateCmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                con.Dispose();
+            }
+        }
+        
+
         public static void Delete(LootboxClass Ib)
         {
             SqlConnection con = DBHelper.GetConnection();
