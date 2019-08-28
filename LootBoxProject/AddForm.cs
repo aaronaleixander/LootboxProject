@@ -28,7 +28,7 @@ namespace LootBoxProject
                 txtName.Text = existingLootbox.Name;
                 txtContents.Text = existingLootbox.Contents;
                 txtDescription.Text = existingLootbox.Description;
-                existingLootbox.Price = Convert.ToDouble(txtPrice.Text);
+                txtPrice.Text = existingLootbox.Price.ToString();
             }
 
         }
