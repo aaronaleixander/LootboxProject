@@ -53,8 +53,8 @@ namespace LootBoxProject
         private void BtnEditBox_Click(object sender, EventArgs e)
         {
             LootboxClass ltbx = lstLootBox.SelectedItem as LootboxClass;
-            FrmAddUpdate updateForm = new FrmAddUpdate();
-            LootboxDB.Update(ltbx);
+            FrmAddUpdate updateForm = new FrmAddUpdate(ltbx);
+            
             updateForm.ShowDialog();
             
             //place at end of code
