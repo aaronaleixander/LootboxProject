@@ -56,8 +56,6 @@ namespace LootBoxProject
             FrmAddUpdate updateForm = new FrmAddUpdate(ltbx);
             
             updateForm.ShowDialog();
-            
-            //place at end of code
             PopulateForm();
         }
 

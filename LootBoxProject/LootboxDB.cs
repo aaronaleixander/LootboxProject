@@ -18,7 +18,7 @@ namespace LootBoxProject
 
             // Get the query set up
 
-            string query = "SELECT LootboxTheme, LootboxName, LootboxContents, LootboxDescription, LootboxPrice FROM Lootboxes";
+            string query = "SELECT LootboxID, LootboxTheme, LootboxName, LootboxContents, LootboxDescription, LootboxPrice FROM Lootboxes";
 
 
             SqlCommand selCmd = new SqlCommand
@@ -41,6 +41,7 @@ namespace LootBoxProject
             {
                 LootboxClass tempBox = new LootboxClass
                 {
+                    LootboxID = Convert.ToInt32(rdr["LootboxID"]),
                     Theme = Convert.ToString(rdr["LootboxTheme"]),
                     Name = Convert.ToString(rdr["LootboxName"]),
                     Contents = Convert.ToString(rdr["LootboxContents"]),
@@ -59,11 +60,12 @@ namespace LootBoxProject
             SqlCommand addCmd = new SqlCommand();
             addCmd.Connection = con;
 
-            addCmd.CommandText = "INSERT INTO Lootboxes (LootboxTheme, LootboxName, LootboxContents, LootboxDescription, LootboxPrice)" +
-                                 "VALUES (@theme, @name, @contents, @description, @price)";
+            addCmd.CommandText = "INSERT INTO Lootboxes (LootboxID,LootboxTheme, LootboxName, LootboxContents, LootboxDescription, LootboxPrice)" +
+                                 "VALUES (@id, @theme, @name, @contents, @description, @price)";
 
             // Add values into the parameters
 
+            addCmd.Parameters.AddWithValue("@id", lb.LootboxID);
             addCmd.Parameters.AddWithValue("@theme", lb.Theme);
             addCmd.Parameters.AddWithValue("@name", lb.Name);
             addCmd.Parameters.AddWithValue("@contents", lb.Contents);

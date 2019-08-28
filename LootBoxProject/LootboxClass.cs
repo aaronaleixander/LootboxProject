@@ -11,8 +11,9 @@ namespace LootBoxProject
         // Default no arg constructor
         public LootboxClass()
         { }
-        public LootboxClass(string theme, string name, string contents, string description, double price)
+        public LootboxClass(int id,string theme, string name, string contents, string description, double price)
         {
+            LootboxID = id;
             Theme = theme;
             Name = name;
             Contents = contents;
