@@ -54,7 +54,6 @@ namespace LootBoxProject
         {
             LootboxClass ltbx = lstLootBox.SelectedItem as LootboxClass;
             FrmAddUpdate updateForm = new FrmAddUpdate(ltbx);
-            
             updateForm.ShowDialog();
             PopulateForm();
         }
@@ -74,12 +73,11 @@ namespace LootBoxProject
 
         private void PopulateLootboxTxt()
         {
-
             if (lstLootBox.SelectedIndex != -1)
-
             {
                 LootboxClass boxs = lstLootBox.SelectedItem as LootboxClass;
                 txtLootBox.Text = boxs.Description;
+                txtItem.Text = boxs.Contents;
             }
         }
 

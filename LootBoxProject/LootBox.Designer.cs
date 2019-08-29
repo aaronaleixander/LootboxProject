@@ -29,54 +29,48 @@
         private void InitializeComponent()
         {
             this.lstLootBox = new System.Windows.Forms.ListBox();
-            this.LstItem = new System.Windows.Forms.ListBox();
             this.txtLootBox = new System.Windows.Forms.TextBox();
             this.txtItem = new System.Windows.Forms.TextBox();
             this.btnAddBox = new System.Windows.Forms.Button();
             this.btnEditBox = new System.Windows.Forms.Button();
             this.btnDeleteBox = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lstLootBox
             // 
             this.lstLootBox.FormattingEnabled = true;
-            this.lstLootBox.Location = new System.Drawing.Point(24, 94);
+            this.lstLootBox.Location = new System.Drawing.Point(44, 71);
             this.lstLootBox.Name = "lstLootBox";
-            this.lstLootBox.Size = new System.Drawing.Size(195, 121);
+            this.lstLootBox.Size = new System.Drawing.Size(195, 225);
             this.lstLootBox.TabIndex = 0;
             this.lstLootBox.SelectedIndexChanged += new System.EventHandler(this.LstLootBox_SelectedIndexChanged);
-            // 
-            // LstItem
-            // 
-            this.LstItem.FormattingEnabled = true;
-            this.LstItem.Location = new System.Drawing.Point(225, 94);
-            this.LstItem.Name = "LstItem";
-            this.LstItem.Size = new System.Drawing.Size(192, 121);
-            this.LstItem.TabIndex = 1;
             // 
             // txtLootBox
             // 
             this.txtLootBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtLootBox.Location = new System.Drawing.Point(24, 221);
+            this.txtLootBox.Location = new System.Drawing.Point(317, 40);
             this.txtLootBox.Multiline = true;
             this.txtLootBox.Name = "txtLootBox";
             this.txtLootBox.ReadOnly = true;
-            this.txtLootBox.Size = new System.Drawing.Size(195, 164);
+            this.txtLootBox.Size = new System.Drawing.Size(195, 132);
             this.txtLootBox.TabIndex = 2;
             // 
             // txtItem
             // 
-            this.txtItem.Location = new System.Drawing.Point(225, 221);
+            this.txtItem.Location = new System.Drawing.Point(320, 204);
             this.txtItem.Multiline = true;
             this.txtItem.Name = "txtItem";
             this.txtItem.ReadOnly = true;
-            this.txtItem.Size = new System.Drawing.Size(192, 164);
+            this.txtItem.Size = new System.Drawing.Size(192, 135);
             this.txtItem.TabIndex = 3;
             // 
             // btnAddBox
             // 
-            this.btnAddBox.Location = new System.Drawing.Point(448, 192);
+            this.btnAddBox.Location = new System.Drawing.Point(12, 381);
             this.btnAddBox.Name = "btnAddBox";
             this.btnAddBox.Size = new System.Drawing.Size(134, 23);
             this.btnAddBox.TabIndex = 4;
@@ -86,7 +80,7 @@
             // 
             // btnEditBox
             // 
-            this.btnEditBox.Location = new System.Drawing.Point(448, 221);
+            this.btnEditBox.Location = new System.Drawing.Point(159, 381);
             this.btnEditBox.Name = "btnEditBox";
             this.btnEditBox.Size = new System.Drawing.Size(134, 23);
             this.btnEditBox.TabIndex = 5;
@@ -96,7 +90,7 @@
             // 
             // btnDeleteBox
             // 
-            this.btnDeleteBox.Location = new System.Drawing.Point(448, 250);
+            this.btnDeleteBox.Location = new System.Drawing.Point(308, 381);
             this.btnDeleteBox.Name = "btnDeleteBox";
             this.btnDeleteBox.Size = new System.Drawing.Size(134, 23);
             this.btnDeleteBox.TabIndex = 6;
@@ -106,7 +100,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(448, 279);
+            this.btnClose.Location = new System.Drawing.Point(448, 381);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(134, 23);
             this.btnClose.TabIndex = 7;
@@ -114,21 +108,50 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
-            // LootBox
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(105, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Lootboxes";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(363, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Lootbox Description";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(378, 188);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Lootbox Items";
+            // 
+            // LootBoxClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 444);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnDeleteBox);
             this.Controls.Add(this.btnEditBox);
             this.Controls.Add(this.btnAddBox);
             this.Controls.Add(this.txtItem);
             this.Controls.Add(this.txtLootBox);
-            this.Controls.Add(this.LstItem);
             this.Controls.Add(this.lstLootBox);
-            this.Name = "LootBox";
-            this.Text = "LootBox";
+            this.Name = "LootBoxClass";
+            this.Text = "Lootbox Manager 1.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -138,13 +161,15 @@
         #endregion
 
         private System.Windows.Forms.ListBox lstLootBox;
-        private System.Windows.Forms.ListBox LstItem;
         private System.Windows.Forms.TextBox txtLootBox;
         private System.Windows.Forms.TextBox txtItem;
         private System.Windows.Forms.Button btnAddBox;
         private System.Windows.Forms.Button btnEditBox;
         private System.Windows.Forms.Button btnDeleteBox;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
